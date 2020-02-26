@@ -23,4 +23,12 @@ class Vendor
     end
   end
 
+  def potential_revenue
+    total_revenue = 0
+    inventory.each do |item|
+      total_revenue += (item[0].price * item[1])
+    end
+    total_revenue
+  end
+
 end
